@@ -28,5 +28,8 @@
                 </div>
             </form>
         </div>
+        <a href="/login">
+            <p>戻る</p>
+        </a>
     </div>
 </body>

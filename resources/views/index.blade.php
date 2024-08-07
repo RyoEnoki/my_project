@@ -46,7 +46,13 @@
             </main-container>
         </main-wrapper>
         <postlist-wrapper>
-            <postlist-container
+            <postlist-container>
+            @foreach($posts as $post)
+                <a href="{{ route('post.show', $post->id) }}">
+                    <p>{{ $post->title }}</p>
+                </a>
+                <p>{{ Str::limit($post->body, 100, '...') }}</p>
+            @endforeach
                 <!--投稿タイトル、写真文５０文字程度-->
                 <a href="/postlist">
                     <p>投稿をもっと見る</p>
