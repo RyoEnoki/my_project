@@ -16,6 +16,20 @@
         </style>
     </head>
     <body>
+        <header>
+            <div class=header-container>
+        <?php if (isset($variables) && $variables["isLoginActive"]) { ?>
+            <a href="/unregister">ログアウト</a>
+        <?php } else { ?>
+            <a href="/loginpage">
+                <h2>ログイン</h2>
+            </a>
+            <a href="/regist">
+                <h2>新規登録</h2>
+            </a>
+        <?php } ?>
+            </div>
+        </header>
         <main-wrapper>
             <main-container>
                 <div class=mainmessage>
@@ -25,8 +39,9 @@
             </main-container>
         </main-wrapper>
         <postlist-wrapper>
-            <postlist-container>
-                /*投稿タイトル、
+            <postlist-container
+                <!--投稿タイトル、写真文５０文字程度-->
             </postlist-container>
         </postlist-wrapper>
+
     </body>
