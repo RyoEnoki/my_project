@@ -15,4 +15,10 @@ class Maincontroller extends Controller
     public function login( Request $request ) {
         return view("login/login",[]);
     }
+    public function postlist( Request $request ) {
+        return view("post/postlist", []);
+    }
+    public function post( Request $request ) {
+        return view("post/post", []);
+    }
 }

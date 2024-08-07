@@ -18,16 +18,23 @@
     <body>
         <header>
             <div class=header-container>
-        <?php if (isset($variables) && $variables["isLoginActive"]) { ?>
-            <a href="/unregister">ログアウト</a>
-        <?php } else { ?>
-            <a href="/loginpage">
-                <h2>ログイン</h2>
-            </a>
-            <a href="/regist">
-                <h2>新規登録</h2>
-            </a>
-        <?php } ?>
+                <?php if (isset($variables) && $variables["isLoginActive"]) { ?>
+                    <a href="/unregister">ログアウト</a>
+                <?php } else { ?>
+                <a href="/loginpage">
+                    <h2>ログイン</h2>
+                </a>
+                <p>ログインして投稿しよう</p>
+                <a href="/regist">
+                    <h2>新規登録</h2>
+                </a>
+                <?php } ?>
+                <?php if (isset($variables) && $variables["isLoginActive"]) { ?>
+                    <a href="/post">投稿する</a>
+                <?php } ?>
+                <a href="/postlist">
+                    <p>投稿一覧</p>
+                </a>
             </div>
         </header>
         <main-wrapper>
@@ -41,6 +48,9 @@
         <postlist-wrapper>
             <postlist-container
                 <!--投稿タイトル、写真文５０文字程度-->
+                <a href="/postlist">
+                    <p>投稿をもっと見る</p>
+                </a>
             </postlist-container>
         </postlist-wrapper>
 

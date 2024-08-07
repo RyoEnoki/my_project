@@ -31,9 +31,9 @@ class Logincontroller extends Controller
         if (count($records) == 0) {
         return response("ユーザーデータの登録処理中に問題が発生しました。<a href='/login'>前のページへ戻る</a>");
         }
-        $request->session()->put( "login_id", $records[0]->id );
 
-        return response("登録が完了しました。<a href='/'>前のページへ戻る</a>");
+        $request->session()->put( "login_id", $records[0]->id );
+        return response("登録が完了しました。<a href='/login'>前のページへ戻る</a>");
         }
     public function signin(Request $request){
         $name = $request->input("name");
