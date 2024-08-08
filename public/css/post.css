@@ -1,0 +1,43 @@
+body {
+    background-color: #339999;
+}
+.post-wrapper{
+    width: 100%;
+}
+.post-container{
+    text-align: right;
+    width: 20%;
+    margin: 0 auto;
+    border: 10px ridge whitesmoke;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color:cadetblue
+}
+.post-container h2{
+    display: inline-block;
+    padding: 0 5px;
+    border: 1px double rgb(234, 189, 104);
+    background-color: wheat;
+    border-radius: 30px;
+    font-size: 45px;
+}
+
+.name,.title{
+    color:white;
+
+}
+.main {
+    display: inline-block;
+    width: 100%;
+    height:120px;
+    padding: 0.5em;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    margin: 0.5em 0;
+}
+strong{
+    color: white;
+    display: block;
+    text-align: left;
+}

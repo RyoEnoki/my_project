@@ -1,0 +1,29 @@
+body {
+    background-color: #339999;
+}
+.post-detail {
+    padding-left: 30px;
+}
+.title{
+    display: inline-block;
+    padding: 0 5px;
+    border: 1px solid wheat;
+    background-color: wheat;
+    border-radius: 30px;
+    font-size: 50px;
+}
+.body{
+    font-size: 30px;
+    display: block;
+    border: 3px ridge wheat;
+    background-color: wheat;
+    border-radius: 8px;
+    word-break: break-all;
+
+}
+.name {
+    color:white;
+}
+.btn{
+    float: right;
+}

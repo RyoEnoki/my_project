@@ -1,0 +1,91 @@
+header {
+    background-color:#339999;
+    height: 65px;
+    color: white;
+    font-weight: bold;
+}
+header p {
+    display: inline;
+    float: right;
+    line-height:  65px;
+}
+header a {
+    float: right;
+    line-height: 60px;
+    border: 0.5px solid white;
+    border-bottom: 4px solid white;
+    border-radius: 5px;
+    padding: 0 10px;
+
+}
+
+header a:hover {
+    background-color:darkcyan;
+    cursor:grab;
+}
+
+header a:active {
+    background-color:darkcyan;
+    transform: translateY(4px);
+    border-bottom: none;
+    border-bottom: 2px solid white;
+    cursor:grabbing;
+}
+
+.post {
+    float:left;
+}
+
+.mainmessage {
+    height:400px;
+    padding-top:  150px;
+    text-align: center;
+    background-image: url(/css/images/game.jpeg);
+    background-attachment: fixed;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.7px;
+    color:yellow;
+}
+.mainmessage h1{
+    font-size: 75px;
+    font-weight: bolder;
+    font-family: HiraMinProN-W3;
+}
+.mainmessage p{
+    font-size: 45px;
+    font-weight: bold;
+    font-family: HiraMinProN-W3;
+    color:indianred;
+}
+.postlist-wrapper{
+    background-color:#339999;
+}
+.postlist-wrapper h2{
+    font-size: 25px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: burlywood;
+    border: 0.1px solid white;
+    border-radius: 4px;
+    font-family: "Yu Mincho";
+
+}
+.postlist-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px 0;
+    height: 270px;
+}
+.postlist-container  a{
+    color: blue;
+    border-bottom: 1px solid darkblue;
+    font-size: 20px;
+}
+.postlist-container  a:hover{
+    color:darkblue;
+    cursor:grab;
+}
+.postlist-container  a:active{
+    color:darkblue;
+    cursor:grabbing;
+}

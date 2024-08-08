@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="/css/login.css">
+
     <title></title>
 </head>
 <body>
@@ -15,19 +17,20 @@
         <form method="post" action="signin">
             @csrf
                 @csrf
-                <div>
+                <div class="name">
                     名前 : <input type="text" name="name">
                 </div>
-                <div>
+                <div class="password">
                     PW : <input type="password" name="password">
                 </div>
-                <div>
+                <div class="submit">
                     <input type="submit" value="送信">
                 </div>
             </form>
-        </div>
         <a href="/login">
-            <p>戻る</p>
+            <p class="back">戻る</p>
         </a>
+        </div>
+
     </div>
 </body>

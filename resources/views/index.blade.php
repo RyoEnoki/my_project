@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="/css/index.css">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -22,42 +22,47 @@
                     <a href="/unregister">ログアウト</a>
                 <?php } else { ?>
                 <a href="/loginpage">
-                    <h2>ログイン</h2>
+                    <h2 class="login">ログイン</h2>
                 </a>
-                <p>ログインして投稿しよう</p>
+
                 <a href="/regist">
                     <h2>新規登録</h2>
                 </a>
+                <p>ログインして投稿しよう⇨</p>
                 <?php } ?>
                 <?php if (isset($variables) && $variables["isLoginActive"]) { ?>
-                    <a href="/post">投稿する</a>
+                    <a class="post" href="/post">投稿する</a>
                 <?php } ?>
-                <a href="/postlist">
+                <a  class="post" href="/postlist">
                     <p>投稿一覧</p>
                 </a>
             </div>
         </header>
-        <main-wrapper>
-            <main-container>
-                <div class=mainmessage>
+        <div class="main-wrapper">
+            <div class="main-container">
+                <div class="mainmessage">
                     <h1>ようこそ！ボードゲームボードへ！！</h1>
                     <p>ボードゲームについて自由に語り合おう！</p>
                 </div>
-            </main-container>
-        </main-wrapper>
-        <postlist-wrapper>
-            <postlist-container>
+            </div>
+        </div>
+        <div class="postlist-wrapper">
+            <h2>~~新着記事~~</h2>
+            <div class="postlist-container">
+                <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
             @foreach($posts as $post)
                 <a href="{{ route('post.show', $post->id) }}">
-                    <p>{{ $post->title }}</p>
+                    <p class="title">new&gt;&gt;{{ $post->title }}</p>
                 </a>
-                <p>{{ Str::limit($post->body, 100, '...') }}</p>
+                <p class="body">{{ Str::limit($post->body, 100, '...') }}</p>
             @endforeach
                 <!--投稿タイトル、写真文５０文字程度-->
                 <a href="/postlist">
-                    <p>投稿をもっと見る</p>
+                    <p>&lt;投稿をもっと見る&gt;</p>
                 </a>
-            </postlist-container>
-        </postlist-wrapper>
+                <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+
+            </div>
+        </div>
 
     </body>
