@@ -11,7 +11,9 @@ class Logincontroller extends Controller
         $variables = [
             "isLoginActive" => isset( $loginId )
         ];
-        return view("index", compact("variables"));
+        $posts = DB::table('post')->orderBy('id', 'desc')->limit(3)->get();
+
+        return view("index", compact("variables","posts"));
     }
     public function register( Request $request) {
         $name = $request->input("name");

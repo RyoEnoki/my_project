@@ -9,17 +9,11 @@ class Itemcontroller extends Controller
 {
     public function posts( Request $request) {
         $posts = DB::table('post')->orderBy('id', 'desc')->paginate(6);
-
-
-
     // ビューにデータを渡す
     return view('post.postlist', compact('posts'));
 }
     public function index( Request $request) {
         $posts = DB::table('post')->orderBy('id', 'desc')->limit(3)->get();
-
-
-
     // ビューにデータを渡す
     return view('index', compact('posts'));
 }
