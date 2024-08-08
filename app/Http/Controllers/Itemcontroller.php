@@ -12,11 +12,6 @@ class Itemcontroller extends Controller
     // ビューにデータを渡す
     return view('post.postlist', compact('posts'));
 }
-    public function index( Request $request) {
-        $posts = DB::table('post')->orderBy('id', 'desc')->limit(3)->get();
-    // ビューにデータを渡す
-    return view('index', compact('posts'));
-}
 
     public function show($id) {
         // 特定のIDに基づく投稿を取得

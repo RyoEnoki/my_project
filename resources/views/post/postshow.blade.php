@@ -13,6 +13,12 @@
         <h1>{{ $post->title }}</h1>
         <p><strong>Name:</strong> {{ $post->name }}</p>
         <p><strong>Body:</strong> {{ $post->body }}</p>
+
+<form action="{{ route('post.destroy', ['id' => $post->id]) }}" method="POST">
+    @csrf
+    @method('DELETE')  <!-- DELETEメソッドを指定 -->
+    <button type="submit" class="btn btn-danger">削除</button>
+</form>
         <a href="{{ url('/postlist') }}">戻る</a>
     </div>
 </body>
